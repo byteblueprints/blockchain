@@ -1,6 +1,7 @@
 import shr_n
 import rotr_n
 import xor_n
+import add_n
 
 def main():
     print("SHR Example:")
@@ -9,6 +10,8 @@ def main():
     rotr_n.rotr_n(3454, 5)
     print("\nXOR Example:")
     xor_n.xor_n(3454, 1234)
+    print("\nADD Example:")
+    add_n.add_n(3454, 1234)
 
 
 if __name__ == "__main__":
