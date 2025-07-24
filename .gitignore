@@ -1,0 +1,25 @@
+# ByteBlueprints Blockchain Project .gitignore
+
+# Python cache and virtual environments
+__pycache__/
+.venv/
+*.pyc
+
+# Python version management
+.python-version
+
+# Lock files
+uv.lock
+
+# Manim and media outputs (generated files)
+02.SHA256/manim_code/media/images/
+02.SHA256/manim_code/media/videos/
+02.SHA256/manim_code/media/texts/
+
+# Ignore all partial movie files and generated videos
+02.SHA256/manim_code/media/videos/main/1080p60/partial_movie_files/
+*.mp4
+
+# Ignore any other temporary or build files
+*.log
+*.tmp
