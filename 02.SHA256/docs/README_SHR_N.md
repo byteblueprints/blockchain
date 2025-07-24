@@ -1,42 +1,31 @@
-# SHR_N: Logical Right Shift Utility
+# SHR (Logical Right Shift) Operation
 
-This module provides a simple implementation of a logical right shift (bitwise shift right) operation in Python, returning a 32-bit binary string representation of the result. It is useful for understanding bitwise operations, especially in the context of cryptographic algorithms like SHA-256.
+## What is SHR?
+SHR (logical right shift) is a bitwise operation that shifts all bits of a binary number to the right by a specified number of positions. Zeros are shifted in from the left, and bits shifted off the right end are discarded.
 
-## Introduction
+For example, shifting the 8-bit value `10110011` right by 3 positions yields `00010110`.
 
-The `shr_n` function takes an integer input, shifts it right by a specified number of bits, and returns the result as a 32-bit binary string. It also prints the binary representation before and after the shift for educational purposes.
+## Usage in SHA-256
+In the SHA-256 cryptographic hash algorithm, SHR is used in the computation of message schedule and compression functions. It is essential for mixing and diffusion in the hash process.
 
-## Code Usage
+## Implementation in This Project
+- The function `shr_n(x, n)` is implemented in [`02.SHA256/implementation/bitwise_ops/shr_n.py`](../implementation/bitwise_ops/shr_n.py).
+    - It accepts an integer `x` and shifts it right by `n` bits, returning a 32-bit binary string.
+    - Example usage:
+      ```python
+      from bitwise_ops.shr_n import shr_n
+      shr_n(3454, 5)
+      ```
+- Demonstration calls are included in [`02.SHA256/implementation/main.py`](../implementation/main.py).
 
-### 1. Import and Use the Function
+## Visualization
+- The animation for the SHR operation is implemented in [`02.SHA256/manim_code/scenes/shr_n_anim.py`](../manim_code/scenes/shr_n_anim.py) as the `ShrNAnim` Manim scene.
+- To render the animation, use:
+  ```sh
+  manim -pql main.py ShrNAnim
+  ```
+  from the `manim_code` directory.
 
-```
-from shr_n import shr_n
-
-result = shr_n(3454, 5)
-print(result)  # Output: 32-bit binary string after shifting
-```
-
-### 2. Run the Example Script
-
-You can also run the provided `main.py` script to see an example usage:
-
-```
-python main.py
-```
-
-This will output:
-```
-Before: 00000000000000000000110101111110
-After : 00000000000000000000001011011111
-```
-
-## Requirements
-- Python 3.13 or higher (as specified in `pyproject.toml`)
-
-## File Structure
-- `shr_n.py` : Contains the `shr_n` function implementation.
-- `main.py`  : Example script demonstrating usage.
-
----
-For more details, see the code and comments in `shr_n.py`.
+## Further Reading
+- [SHA-256 Wikipedia](https://en.wikipedia.org/wiki/SHA-2)
+- [Bitwise shift (Wikipedia)](https://en.wikipedia.org/wiki/Bitwise_operation#Bit_shifts)
