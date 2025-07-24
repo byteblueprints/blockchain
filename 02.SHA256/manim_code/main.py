@@ -1,8 +1,8 @@
 from manim import *
-from shr_n_anim import ShrNAnim
-from rotr_n_anim import Rotr32Anim
-from xor_n_anim import XorNAnim
-from add_n_anim import AddNAnim
+from scenes.shr_n_anim import ShrNAnim
+from scenes.rotr_n_anim import Rotr32Anim
+from scenes.xor_n_anim import XorNAnim
+from scenes.add_n_anim import AddNAnim
 
 # This file serves as the entry point to call the animation scenes.
 # To render, use: manim -pql main.py ShrNAnim or manim -pql main.py Rotr32Anim or manim -pql main.py XorNAnim or manim -pql main.py AddNAnim

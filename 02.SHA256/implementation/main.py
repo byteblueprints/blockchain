@@ -1,7 +1,7 @@
-import shr_n
-import rotr_n
-import xor_n
-import add_n
+import bitwise_ops.shr_n as shr_n   
+import bitwise_ops.rotr_n as rotr_n
+import bitwise_ops.xor_n as xor_n
+import bitwise_ops.add_n as add_n
 
 def main():
     print("SHR Example:")
