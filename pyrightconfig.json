@@ -1,0 +1,17 @@
+{
+    "extraPaths": [
+        "02_sha256/implementation",
+        "03_ripemd160/implementation",
+        "04_hmac/implementation",
+        "05_base58/implementation",
+        "06_ecc/implementation",
+        "07_digital_signature/implementation",
+        "08_wallet/implementation",
+        "09_sha512/implementation",
+        "10_hmac_sha512/implementation",
+        "11_pbkdf2/implementation",
+        "12_bip39/implementation",
+        "13_bip32/implementation",
+        "14_hd_wallet/implementation"
+    ]
+}
